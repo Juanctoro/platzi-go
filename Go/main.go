@@ -1,7 +1,7 @@
 package main
 
 import (
-	"ProyectoGit/packages"
+	"ProyectoGit/Go/packages"
 	"fmt"
 )
 
