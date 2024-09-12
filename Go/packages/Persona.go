@@ -7,5 +7,5 @@ type Persona struct {
 }
 
 func (p Persona) Saludar() string {
-	return "Hola, ni nombre es " + p.Nombre
+	return "Hola, mi nombre es " + p.Nombre
 }

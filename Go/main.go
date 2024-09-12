@@ -9,6 +9,14 @@ func multiplicacion(a int) int {
 	return a * 2
 }
 
+func saludos(a int, canal chan string, persona packages.Persona) {
+	// a = cantidad de saludos
+	for i := 0; i < a; i++ {
+		canal <- persona.Saludar()
+	}
+	close(canal)
+}
+
 func main() {
 	fmt.Println("Primer commit")
 
@@ -23,4 +31,15 @@ func main() {
 	}
 
 	fmt.Println(persona.Saludar())
+
+	fmt.Println("Vamos con el uso de go rutines")
+	canal := make(chan string)
+
+	go saludos(3, canal, persona)
+
+	acomulador := 1
+	for saludo := range canal {
+		fmt.Printf("Saludo numero %d: %s\n", acomulador, saludo)
+		acomulador++
+	}
 }
