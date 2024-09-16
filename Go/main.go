@@ -42,4 +42,5 @@ func main() {
 		fmt.Printf("Saludo numero %d: %s\n", acomulador, saludo)
 		acomulador++
 	}
+	fmt.Println("Esta parte es de la cabecerera")
 }
