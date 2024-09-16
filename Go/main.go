@@ -43,4 +43,7 @@ func main() {
 		acomulador++
 	}
 	fmt.Println("Esta parte es de la cabecerera")
+	for i := 0; i < 5; i++ {
+		fmt.Println("Cabecera")
+	}
 }
